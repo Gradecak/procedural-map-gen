@@ -2,7 +2,7 @@
 
 Haskell implementations of Binary Space Partition algorithm for procedural map generation
 
-![alt text](https://github.com/gradecak/procedural-map-gen/img/raw/master/ "Sample Output")
+![alt text](https://github.com/Gradecak/procedural-map-gen/blob/master/sample/BSP_sample.gif "Sample Output")
 
 ### To run:
 ```bash
