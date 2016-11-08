@@ -1,17 +1,11 @@
 module Main where
 
-import BSPGen
+import BSPGen (genMap, drawMap)
 import Graphics.Gloss
-import Control.Monad (mapM)
-
 
 {-Main-}
 main :: IO ()
 main = do
-  s <- splitContainer (container (-350,-350) 700 700) 10 -- generate a tree of containters
-  r <-  mapM room (getLeafs s)
-  let containers = pictures $ drawTree s
-      rooms      = drawRooms r
-      paths      = drawPaths $ genPaths s
-  display (InWindow "Map" (701, 701) (250, 0)) black $ pictures [containers, paths, rooms]
+  generated_map <- genMap (-350,-350) 700 700 5 -- generate a map 
+  display (InWindow "Map" (701, 701) (250, 0)) black $ drawMap generated_map
 
